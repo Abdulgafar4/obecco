@@ -1,0 +1,212 @@
+(() => {
+  const PAGES = [
+    "home",
+    "products",
+    "toolferry",
+    "lien",
+    "clevermart",
+    "cleverjobs",
+    "about",
+    "contact",
+  ];
+  const PRODUCT_PRIMARY = {
+    toolferry: "products",
+    lien: "products",
+    clevermart: "products",
+    cleverjobs: "products",
+  };
+  const TITLES = {
+    home: "Obecco — We design, build, and ship software people can actually use",
+    products: "Products — Obecco",
+    toolferry: "ToolFerry — Obecco",
+    lien: "Lien — Obecco",
+    clevermart: "Clevermart — Obecco",
+    cleverjobs: "CleverJobs — Obecco",
+    about: "About — Obecco",
+    contact: "Contact — Obecco",
+  };
+
+  const state = {
+    page: "home",
+    menuOpen: false,
+    sent: false,
+  };
+
+  let io = null;
+  let failsafe = 0;
+
+  function pageFromHash() {
+    const raw = (location.hash || "").replace(/^#\/?/, "").trim();
+    return PAGES.includes(raw) ? raw : "home";
+  }
+
+  function setHash(page, replace) {
+    const next = page === "home" ? "#/" : `#/${page}`;
+    if (replace) history.replaceState(null, "", next);
+    else if (location.hash !== next) history.pushState(null, "", next);
+  }
+
+  function go(page) {
+    if (!PAGES.includes(page)) return;
+    state.page = page;
+    state.menuOpen = false;
+    setHash(page, false);
+    applyRoute(true);
+    applyLayout();
+  }
+
+  function applyLayout() {
+    const narrow = window.innerWidth < 768;
+    const desk = document.querySelector("[data-desktop-nav]");
+    const burger = document.querySelector("[data-hamburger]");
+    const menu = document.querySelector("[data-mobile-menu]");
+    const tag = document.querySelector("[data-tag]");
+    if (desk) desk.style.display = narrow ? "none" : "flex";
+    if (tag) tag.style.display = window.innerWidth < 560 ? "none" : "inline";
+    if (burger) {
+      burger.style.display = narrow ? "inline-flex" : "none";
+      burger.setAttribute("aria-expanded", state.menuOpen ? "true" : "false");
+      burger.setAttribute(
+        "aria-label",
+        state.menuOpen ? "Close menu" : "Open menu"
+      );
+      const label = burger.querySelector("[data-hamburger-label]");
+      if (label) label.textContent = state.menuOpen ? "Close" : "Menu";
+    }
+    if (menu) menu.style.display = narrow && state.menuOpen ? "flex" : "none";
+  }
+
+  function applyRoute(isChange) {
+    const page = state.page;
+    document.title = TITLES[page] || TITLES.home;
+
+    document.querySelectorAll("[data-page]").forEach((el) => {
+      el.classList.toggle("is-active", el.getAttribute("data-page") === page);
+    });
+
+    const primary = PRODUCT_PRIMARY[page] || page;
+    document.querySelectorAll("[data-nav]").forEach((el) => {
+      const on = el.getAttribute("data-nav") === primary;
+      el.style.color = on ? "#16161A" : "#4E524C";
+      el.style.boxShadow = on ? "inset 0 -1px 0 #16161A" : "none";
+      if (on) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
+    });
+    document.querySelectorAll("[data-mnav]").forEach((el) => {
+      const on = el.getAttribute("data-mnav") === primary;
+      el.style.color = on ? "#2F6B57" : "#16161A";
+      if (on) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
+    });
+    document.querySelectorAll("[data-pindex]").forEach((el) => {
+      const on = el.getAttribute("data-pindex") === page;
+      el.style.borderColor = on ? "#16161A" : "#C6C9BF";
+      el.style.color = on ? "#16161A" : "#3C403A";
+      el.style.background = on ? "#E1E3DC" : "none";
+      if (on) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
+    });
+
+    const status = document.querySelector("[data-sent-status]");
+    if (status) {
+      if (page === "contact" && state.sent) status.removeAttribute("hidden");
+      else status.setAttribute("hidden", "");
+    }
+
+    if (isChange) window.scrollTo(0, 0);
+    animate(page);
+  }
+
+  function animate(page) {
+    const reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const scope = document.querySelector(`[data-page="${page}"]`);
+    if (!scope) return;
+    const items = Array.from(scope.querySelectorAll("[data-reveal]"));
+    if (io) io.disconnect();
+    if (reduce) {
+      items.forEach((el) => {
+        el.style.opacity = "";
+        el.style.animation = "none";
+      });
+      return;
+    }
+    items.forEach((el) => {
+      el.style.animation = "none";
+      el.style.opacity = "";
+    });
+    const play = (el, i) => {
+      el.style.opacity = "";
+      el.style.animation = "rise .5s cubic-bezier(.2,.7,.2,1) both";
+      el.style.animationDelay = Math.min(i, 5) * 0.05 + "s";
+    };
+    const vh = window.innerHeight;
+    const above = items.filter(
+      (el) => el.getBoundingClientRect().top < vh * 0.95
+    );
+    above.forEach(play);
+    const rest = items.filter((el) => above.indexOf(el) === -1);
+    rest.forEach((el) => {
+      el.style.opacity = "0";
+    });
+    io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            play(e.target, i);
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    rest.forEach((el) => io.observe(el));
+    clearTimeout(failsafe);
+    failsafe = setTimeout(() => {
+      rest.forEach((el) => {
+        el.style.opacity = "";
+      });
+    }, 3000);
+  }
+
+  function onSubmit(e) {
+    e.preventDefault();
+    state.sent = true;
+    const status = document.querySelector("[data-sent-status]");
+    if (status) status.removeAttribute("hidden");
+  }
+
+  document.addEventListener("click", (e) => {
+    const goEl = e.target.closest("[data-go]");
+    if (goEl) {
+      e.preventDefault();
+      go(goEl.getAttribute("data-go"));
+      return;
+    }
+    const action = e.target.closest("[data-action]");
+    if (action?.getAttribute("data-action") === "toggle-menu") {
+      e.preventDefault();
+      state.menuOpen = !state.menuOpen;
+      applyLayout();
+    }
+  });
+
+  const form = document.querySelector("[data-contact-form]");
+  if (form) form.addEventListener("submit", onSubmit);
+
+  window.addEventListener("resize", applyLayout);
+  window.addEventListener("hashchange", () => {
+    const page = pageFromHash();
+    if (page === state.page) return;
+    state.page = page;
+    state.menuOpen = false;
+    applyRoute(true);
+    applyLayout();
+  });
+
+  state.page = pageFromHash();
+  setHash(state.page, true);
+  applyRoute(false);
+  applyLayout();
+})();

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/styles.css">
+  <script src="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/_ds_bundle.js"></script>
+  <script src="motion.js"></script>
+  <style>
+    body { margin: 0; overflow-x: hidden; background: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent-800); }
+    .input { border-radius: 0; background: transparent; }
+    .input:focus-visible { outline: 1px solid var(--color-accent); }
+  </style>
+</helmet>
+
+<dc-import name="SiteNav" active="contact" hint-size="100%,78px"></dc-import>
+
+<main ref="{{ root }}" style="font-family:var(--font-body);background:var(--color-bg);color:var(--color-text);">
+
+  <section data-screen-label="Contact header" style="padding:clamp(130px,20vh,210px) 0 clamp(40px,6vh,70px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(22px,3.4vh,40px);">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);">Contact</span>
+        <span style="width:clamp(24px,3vw,54px);height:1px;background:var(--color-divider);"></span>
+        <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 50%, transparent);">Reply within two working days</span>
+      </div>
+      <h1 data-reveal="up" style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,7.4vw,124px);line-height:0.88;letter-spacing:-0.035em;max-width:14ch;">Tell us what you want built.</h1>
+      <p data-reveal="up" data-reveal-delay="80" style="margin:0;max-width:50ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 74%, transparent);">A few lines is enough to start. If it is not a fit, we will say so quickly and point you somewhere better.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Contact form" style="padding:0 0 clamp(70px,10vh,130px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(36px,5vw,100px);align-items:start;">
+
+      <div class="blueprint" style="position:relative;background:var(--color-bg);padding:clamp(24px,3.2vw,48px);">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div ref="{{ done }}" style="display:flex;flex-direction:column;gap:18px;min-height:clamp(380px,52vh,560px);justify-content:center;">
+            <span style="width:12px;height:12px;background:var(--color-accent);"></span>
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(28px,3.4vw,52px);line-height:1;letter-spacing:-0.028em;">Message sent.</span>
+            <span style="font-size:15.5px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 70%, transparent);max-width:40ch;">Thanks — we have it. You will hear back from a person, not an autoresponder, within two working days.</span>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;">
+              <a href="Products.dc.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-text);border:1px solid var(--color-divider);padding:12px 20px;font-family:var(--font-heading);font-weight:600;font-size:13.5px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;transition:border-color 260ms, color 260ms;" style-hover="border-color:var(--color-accent);color:var(--color-accent-700);">See our products</a>
+              <button onClick="{{ reset }}" style="display:inline-flex;align-items:center;gap:10px;cursor:pointer;color:var(--color-accent-700);background:transparent;border:1px solid transparent;padding:12px 4px;font-family:var(--font-heading);font-weight:600;font-size:13.5px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;">Send another</button>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ open }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:clamp(18px,2.6vh,26px);">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Project enquiry</span>
+              <span style="flex:1;height:1px;background:var(--color-divider);"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(14px,2vw,22px);">
+              <div class="field"><label for="c-name">Your name</label><input class="input" id="c-name" name="name" type="text" required="true" placeholder="Jane Okonjo"></div>
+              <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" required="true" placeholder="jane@company.com"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(14px,2vw,22px);">
+              <div class="field"><label for="c-company">Company</label><input class="input" id="c-company" name="company" type="text" placeholder="Optional"></div>
+              <div class="field"><label for="c-budget">Budget range</label>
+                <select class="input" id="c-budget" name="budget">
+                  <option>Not sure yet</option>
+                  <option>Under $10k</option>
+                  <option>$10k – $30k</option>
+                  <option>$30k – $75k</option>
+                  <option>$75k+</option>
+                  <option>Monthly retainer</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>What do you need?</label>
+              <div style="display:flex;flex-wrap:wrap;gap:12px 22px;padding-top:4px;">
+                <label class="radio"><input type="radio" name="kind" value="website" defaultChecked="{{ true }}"><span class="dot"></span>Website</label>
+                <label class="radio"><input type="radio" name="kind" value="application"><span class="dot"></span>Web application</label>
+                <label class="radio"><input type="radio" name="kind" value="product"><span class="dot"></span>Full product build</label>
+                <label class="radio"><input type="radio" name="kind" value="design"><span class="dot"></span>Design / UX</label>
+                <label class="radio"><input type="radio" name="kind" value="commerce"><span class="dot"></span>E-commerce</label>
+                <label class="radio"><input type="radio" name="kind" value="other"><span class="dot"></span>Something else</label>
+              </div>
+            </div>
+            <div class="field"><label for="c-timing">Timing</label>
+              <select class="input" id="c-timing" name="timing">
+                <option>As soon as possible</option>
+                <option>Within a month</option>
+                <option>This quarter</option>
+                <option>Exploring for later</option>
+              </select>
+            </div>
+            <div class="field"><label for="c-msg">What are you building?</label><textarea class="input" id="c-msg" name="message" rows="5" required="true" placeholder="The problem, who it is for, and anything already in place."></textarea></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;border-top:1px solid var(--color-divider);padding-top:clamp(16px,2.4vh,24px);">
+              <button type="submit" data-magnet="10" style="display:inline-flex;align-items:center;gap:14px;cursor:pointer;color:var(--color-bg);background:var(--color-accent);border:1px solid var(--color-accent);padding:15px 26px;font-family:var(--font-heading);font-weight:600;font-size:14px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;transition:background 280ms;" style-hover="background:var(--color-accent-700);">Send enquiry<span style="width:16px;height:1px;background:currentColor;"></span></button>
+              <span style="font-size:13px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 52%, transparent);max-width:32ch;">Or email us directly at <a href="mailto:hello@obecco.com">hello@obecco.com</a>.</span>
+            </div>
+          </form>
+        </sc-if>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:clamp(30px,5vh,52px);">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Direct</span>
+          <a href="mailto:hello@obecco.com" style="text-decoration:none;color:var(--color-text);font-family:var(--font-heading);font-weight:600;font-size:clamp(24px,3.2vw,46px);line-height:1.02;letter-spacing:-0.028em;border-bottom:1px solid var(--color-accent);align-self:flex-start;padding-bottom:6px;">hello@obecco.com</a>
+          <span style="font-size:14.5px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 66%, transparent);max-width:38ch;">Read by the people who would do the work. No ticket queue.</span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">What happens next</span>
+          <div style="display:flex;flex-direction:column;border-top:1px solid var(--color-divider);">
+            <div data-reveal="up" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2vw,26px);padding:15px 0;border-bottom:1px solid var(--color-divider);"><span style="font-size:11px;letter-spacing:0.14em;color:var(--color-accent-700);">01</span><div style="display:flex;flex-direction:column;gap:5px;"><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(17px,1.6vw,22px);">We read it and reply</span><span style="font-size:14px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 64%, transparent);">Within two working days, with an honest first reaction.</span></div></div>
+            <div data-reveal="up" data-reveal-delay="70" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2vw,26px);padding:15px 0;border-bottom:1px solid var(--color-divider);"><span style="font-size:11px;letter-spacing:0.14em;color:color-mix(in srgb, var(--color-text) 40%, transparent);">02</span><div style="display:flex;flex-direction:column;gap:5px;"><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(17px,1.6vw,22px);">A thirty-minute call</span><span style="font-size:14px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 64%, transparent);">Enough to understand the problem and the constraints.</span></div></div>
+            <div data-reveal="up" data-reveal-delay="140" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2vw,26px);padding:15px 0;border-bottom:1px solid var(--color-divider);"><span style="font-size:11px;letter-spacing:0.14em;color:color-mix(in srgb, var(--color-text) 40%, transparent);">03</span><div style="display:flex;flex-direction:column;gap:5px;"><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(17px,1.6vw,22px);">A written proposal</span><span style="font-size:14px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 64%, transparent);">Scope, approach, timeline, and price. One document, no deck.</span></div></div>
+            <div data-reveal="up" data-reveal-delay="210" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2vw,26px);padding:15px 0;"><span style="font-size:11px;letter-spacing:0.14em;color:color-mix(in srgb, var(--color-text) 40%, transparent);">04</span><div style="display:flex;flex-direction:column;gap:5px;"><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(17px,1.6vw,22px);">We start</span><span style="font-size:14px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 64%, transparent);">Usually within two weeks of signing.</span></div></div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--color-divider);padding-top:clamp(20px,3vh,30px);">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Good fits</span>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <span style="font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Founders with a product to get into production.</span>
+            <span style="font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Teams whose internal process has outgrown spreadsheets.</span>
+            <span style="font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Companies whose site no longer matches the business.</span>
+            <span style="font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Anyone inheriting a build that needs a steady hand.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background:var(--color-bg);border-top:1px solid var(--color-divider);padding:clamp(50px,7vh,80px) 0 clamp(30px,4vh,44px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(30px,5vh,56px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(28px,4vw,64px);">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:0.26em;text-transform:uppercase;">Obecco</span>
+          <span style="font-size:13.5px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 58%, transparent);max-width:26ch;">We build software that moves. Independent software company, founded 2026.</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Site</span>
+          <a href="Home.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Home</a>
+          <a href="Services.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Services</a>
+          <a href="Products.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Products</a>
+          <a href="About.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">About</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Products</span>
+          <a href="Products.dc.html#toolferry" style="text-decoration:none;color:var(--color-text);font-size:14px;">ToolFerry</a>
+          <a href="Products.dc.html#lien" style="text-decoration:none;color:var(--color-text);font-size:14px;">Lien</a>
+          <a href="Products.dc.html#clevermart" style="text-decoration:none;color:var(--color-text);font-size:14px;">Clevermart</a>
+          <a href="Products.dc.html#cleverjobs" style="text-decoration:none;color:var(--color-text);font-size:14px;">CleverJobs</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Contact</span>
+          <a href="mailto:hello@obecco.com" style="text-decoration:none;color:var(--color-text);font-size:14px;">hello@obecco.com</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;border-top:1px solid var(--color-divider);padding-top:20px;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">
+        <span>© 2026 Obecco</span>
+        <span>Designed and built in-house</span>
+      </div>
+    </div>
+  </footer>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+
+  constructor(props) { super(props); this.root = React.createRef(); }
+
+  componentDidMount() {
+    const start = () => {
+      if (!window.ObeccoMotion) { this._t = setTimeout(start, 40); return; }
+      this.m = window.ObeccoMotion.boot(this.root.current || document);
+      this.m.sync();
+    };
+    start();
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); if (this.m) this.m.destroy(); }
+
+  renderVals() {
+    return {
+      root: this.root,
+      sent: this.state.sent,
+      open: !this.state.sent,
+      submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

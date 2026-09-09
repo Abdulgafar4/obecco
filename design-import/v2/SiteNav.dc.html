@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/styles.css">
+  <script src="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/_ds_bundle.js"></script>
+</helmet>
+<header ref="{{ bar }}" style="position:fixed;top:0;left:0;right:0;z-index:400;background:transparent;border-bottom:1px solid transparent;transition:background 500ms cubic-bezier(.19,1,.22,1), border-color 500ms cubic-bezier(.19,1,.22,1), backdrop-filter 500ms;font-family:var(--font-body);">
+  <div ref="{{ inner }}" style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);height:78px;display:flex;align-items:center;gap:clamp(20px,3vw,44px);transition:height 500ms cubic-bezier(.19,1,.22,1);">
+    <a href="Home.dc.html" style="display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--color-text);margin-right:auto;">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:0.26em;text-transform:uppercase;line-height:1;">Obecco</span>
+      <span style="width:5px;height:5px;background:var(--color-accent);display:block;transform:translateY(-1px);"></span>
+    </a>
+    <nav ref="{{ links }}" style="display:flex;align-items:center;gap:clamp(18px,2.4vw,38px);">
+      <a href="Services.dc.html" data-page="services" style="text-decoration:none;color:var(--color-text);font-size:13.5px;letter-spacing:0.10em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent;transition:color 260ms, border-color 260ms;" style-hover="color:var(--color-accent-700);border-color:var(--color-accent);">Services</a>
+      <a href="Products.dc.html" data-page="products" style="text-decoration:none;color:var(--color-text);font-size:13.5px;letter-spacing:0.10em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent;transition:color 260ms, border-color 260ms;" style-hover="color:var(--color-accent-700);border-color:var(--color-accent);">Products</a>
+      <a href="About.dc.html" data-page="about" style="text-decoration:none;color:var(--color-text);font-size:13.5px;letter-spacing:0.10em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent;transition:color 260ms, border-color 260ms;" style-hover="color:var(--color-accent-700);border-color:var(--color-accent);">About</a>
+    </nav>
+    <a ref="{{ cta }}" href="Contact.dc.html" data-magnet="10" style="position:relative;display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-bg);background:var(--color-accent);border:1px solid var(--color-accent);padding:11px 20px;font-family:var(--font-heading);font-weight:600;font-size:13.5px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;transition:background 260ms;" style-hover="background:var(--color-accent-700);">
+      Start a project
+      <span style="display:block;width:14px;height:1px;background:currentColor;"></span>
+    </a>
+    <button ref="{{ burger }}" onClick="{{ toggle }}" aria-label="Menu" style="display:none;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;padding:0;background:transparent;border:1px solid var(--color-divider);cursor:pointer;">
+      <span ref="{{ b1 }}" style="display:block;width:20px;height:1px;background:var(--color-text);margin:0 auto;transition:transform 380ms cubic-bezier(.19,1,.22,1);"></span>
+      <span ref="{{ b2 }}" style="display:block;width:20px;height:1px;background:var(--color-text);margin:0 auto;transition:transform 380ms cubic-bezier(.19,1,.22,1);"></span>
+    </button>
+  </div>
+  <div ref="{{ panel }}" style="display:none;flex-direction:column;gap:2px;padding:clamp(24px,6vw,44px) clamp(20px,3.6vw,56px) 40px;background:var(--color-bg);border-top:1px solid var(--color-divider);">
+    <a href="Services.dc.html" onClick="{{ close }}" style="text-decoration:none;color:var(--color-text);font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,10vw,52px);letter-spacing:-0.02em;line-height:1.16;border-bottom:1px solid var(--color-divider);padding:10px 0;">Services</a>
+    <a href="Products.dc.html" onClick="{{ close }}" style="text-decoration:none;color:var(--color-text);font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,10vw,52px);letter-spacing:-0.02em;line-height:1.16;border-bottom:1px solid var(--color-divider);padding:10px 0;">Products</a>
+    <a href="About.dc.html" onClick="{{ close }}" style="text-decoration:none;color:var(--color-text);font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,10vw,52px);letter-spacing:-0.02em;line-height:1.16;border-bottom:1px solid var(--color-divider);padding:10px 0;">About</a>
+    <a href="Contact.dc.html" onClick="{{ close }}" style="text-decoration:none;color:var(--color-accent-700);font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,10vw,52px);letter-spacing:-0.02em;line-height:1.16;padding:10px 0;">Start a project</a>
+    <span style="margin-top:18px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 50%, transparent);">hello@obecco.com</span>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;products&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: false };
+
+  constructor(props) {
+    super(props);
+    ['bar', 'inner', 'links', 'cta', 'burger', 'panel', 'b1', 'b2'].forEach(k => { this[k] = React.createRef(); });
+  }
+
+  componentDidMount() {
+    const active = (this.props.active || '').toLowerCase();
+    if (this.links.current) {
+      this.links.current.querySelectorAll('[data-page]').forEach(a => {
+        if (a.getAttribute('data-page') === active) {
+          a.style.color = 'var(--color-accent-700)';
+          a.style.borderBottomColor = 'var(--color-accent)';
+        }
+      });
+    }
+    this.onScroll = () => {
+      const s = window.scrollY > 24;
+      const bar = this.bar.current, inner = this.inner.current;
+      if (!bar || !inner) return;
+      bar.style.background = s ? 'color-mix(in srgb, var(--color-bg) 88%, transparent)' : 'transparent';
+      bar.style.backdropFilter = s ? 'saturate(140%) blur(14px)' : 'none';
+      bar.style.borderBottomColor = s ? 'var(--color-divider)' : 'transparent';
+      inner.style.height = s ? '62px' : '78px';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    this.mq = window.matchMedia('(max-width: 900px)');
+    this.applyMode = () => {
+      const m = this.mq.matches;
+      if (this.links.current) this.links.current.style.display = m ? 'none' : 'flex';
+      if (this.cta.current) this.cta.current.style.display = m ? 'none' : 'inline-flex';
+      if (this.burger.current) this.burger.current.style.display = m ? 'flex' : 'none';
+      if (m) { if (this.inner.current) this.inner.current.style.justifyContent = 'space-between'; }
+      else { this.setState({ open: false }); }
+      this.applyPanel();
+    };
+    this.mq.addEventListener('change', this.applyMode);
+    this.applyMode();
+  }
+
+  componentDidUpdate() { this.applyPanel(); }
+
+  applyPanel() {
+    const p = this.panel.current;
+    if (!p) return;
+    const open = this.state.open && this.mq && this.mq.matches;
+    p.style.display = open ? 'flex' : 'none';
+    if (this.b1.current) this.b1.current.style.transform = open ? 'translateY(3.5px) rotate(45deg)' : 'none';
+    if (this.b2.current) this.b2.current.style.transform = open ? 'translateY(-3.5px) rotate(-45deg)' : 'none';
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.mq) this.mq.removeEventListener('change', this.applyMode);
+  }
+
+  renderVals() {
+    return {
+      bar: this.bar, inner: this.inner, links: this.links, cta: this.cta,
+      burger: this.burger, panel: this.panel, b1: this.b1, b2: this.b2,
+      toggle: () => this.setState(s => ({ open: !s.open })),
+      close: () => this.setState({ open: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

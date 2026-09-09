@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/styles.css">
+  <script src="_ds/industry-e56e1932-dde4-4aa2-bdc8-03757f94a7fb/_ds_bundle.js"></script>
+  <script src="motion.js"></script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; overflow-x: hidden; background: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent-800); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</helmet>
+
+<dc-import name="SiteNav" active="products" hint-size="100%,78px"></dc-import>
+
+<main ref="{{ root }}" style="font-family:var(--font-body);background:var(--color-bg);color:var(--color-text);">
+
+  <section data-screen-label="Products header" style="padding:clamp(130px,20vh,220px) 0 clamp(44px,6vh,80px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(24px,4vh,44px);">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);">Products</span>
+        <span style="width:clamp(24px,3vw,54px);height:1px;background:var(--color-divider);"></span>
+        <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 50%, transparent);">Built by Obecco</span>
+      </div>
+      <h1 data-reveal="up" style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,7.6vw,130px);line-height:0.88;letter-spacing:-0.035em;max-width:16ch;">Four products, in our own studio.</h1>
+      <p data-reveal="up" data-reveal-delay="90" style="margin:0;max-width:52ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Two live and in production, two in motion. We fund them ourselves, ship them under our own name, and hold them to the same standard as client work — which is how we know the standard holds.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Product index" style="padding:0 0 clamp(50px,7vh,90px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);">
+      <div data-reveal="up" style="display:flex;flex-direction:column;border-top:1px solid var(--color-divider);">
+        <a href="#toolferry" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;gap:clamp(14px,2.4vw,34px);padding:clamp(13px,1.6vh,18px) 0;border-bottom:1px solid var(--color-divider);text-decoration:none;color:var(--color-text);transition:padding-left 380ms cubic-bezier(.19,1,.22,1), color 260ms;" style-hover="padding-left:12px;color:var(--color-accent-800);">
+          <span style="font-size:11px;letter-spacing:0.14em;color:var(--color-accent-700);">01</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(20px,2.2vw,32px);letter-spacing:-0.02em;">ToolFerry</span>
+          <span class="tag tag-accent" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In production</span>
+        </a>
+        <a href="#lien" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;gap:clamp(14px,2.4vw,34px);padding:clamp(13px,1.6vh,18px) 0;border-bottom:1px solid var(--color-divider);text-decoration:none;color:var(--color-text);transition:padding-left 380ms cubic-bezier(.19,1,.22,1), color 260ms;" style-hover="padding-left:12px;color:var(--color-accent-800);">
+          <span style="font-size:11px;letter-spacing:0.14em;color:var(--color-accent-700);">02</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(20px,2.2vw,32px);letter-spacing:-0.02em;">Lien</span>
+          <span class="tag tag-accent" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In production</span>
+        </a>
+        <a href="#clevermart" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;gap:clamp(14px,2.4vw,34px);padding:clamp(13px,1.6vh,18px) 0;border-bottom:1px solid var(--color-divider);text-decoration:none;color:var(--color-text);transition:padding-left 380ms cubic-bezier(.19,1,.22,1), color 260ms;" style-hover="padding-left:12px;color:var(--color-accent-800);">
+          <span style="font-size:11px;letter-spacing:0.14em;color:color-mix(in srgb, var(--color-text) 40%, transparent);">03</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(20px,2.2vw,32px);letter-spacing:-0.02em;">Clevermart</span>
+          <span class="tag tag-outline" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In progress</span>
+        </a>
+        <a href="#cleverjobs" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;gap:clamp(14px,2.4vw,34px);padding:clamp(13px,1.6vh,18px) 0;text-decoration:none;color:var(--color-text);transition:padding-left 380ms cubic-bezier(.19,1,.22,1), color 260ms;" style-hover="padding-left:12px;color:var(--color-accent-800);">
+          <span style="font-size:11px;letter-spacing:0.14em;color:color-mix(in srgb, var(--color-text) 40%, transparent);">04</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(20px,2.2vw,32px);letter-spacing:-0.02em;color:color-mix(in srgb, var(--color-text) 78%, transparent);">CleverJobs</span>
+          <span class="tag tag-neutral" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In development</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="toolferry" data-screen-label="ToolFerry" data-parallax-scope="1" style="border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(32px,5vh,60px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(28px,4vw,80px);align-items:end;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:baseline;gap:clamp(14px,2vw,26px);">
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);">01</span>
+            <span class="tag tag-accent" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">Shipped / In production</span>
+          </div>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,5.4vw,88px);line-height:0.92;letter-spacing:-0.032em;">ToolFerry</h2>
+          <p style="margin:0;max-width:46ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 72%, transparent);">A multi-tool web platform. Media, converters, PDF, documents, and utilities — the small jobs people otherwise scatter across a dozen sketchy tabs, gathered into one hub that runs fast and asks nothing.</p>
+        </div>
+        <div data-parallax="26" data-follow="14" style="position:relative;">
+          <div data-follow-target="1" class="blueprint" style="position:relative;aspect-ratio:16/10;background:var(--color-bg);transition:transform 200ms linear;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="position:absolute;inset:0;padding:clamp(16px,2vw,30px);display:flex;flex-direction:column;gap:clamp(12px,1.6vw,20px);">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:7px;height:7px;background:var(--color-accent);"></span>
+                <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 48%, transparent);">Toolferry / hub</span>
+                <span style="flex:1;height:1px;background:var(--color-divider);"></span>
+              </div>
+              <div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(3,1fr);gap:clamp(6px,0.8vw,12px);">
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:60%;height:2px;background:var(--color-accent);"></span></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:38%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);background:color-mix(in srgb, var(--color-accent) 12%, transparent);"></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:50%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:30%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:70%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-accent);display:grid;place-items:center;"><span style="width:10px;height:10px;background:var(--color-accent);"></span></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:44%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);"></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:56%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);background:color-mix(in srgb, var(--color-accent) 8%, transparent);"></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:34%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:64%;height:2px;background:var(--color-accent);"></span></div>
+                <div style="border:1px solid var(--color-divider);"></div>
+                <div style="border:1px solid var(--color-divider);display:flex;align-items:flex-end;padding:6px;"><span style="width:48%;height:2px;background:color-mix(in srgb, var(--color-text) 22%, transparent);"></span></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 38%, transparent);"><span>Media</span><span>Convert</span><span>PDF</span><span>Docs</span><span>Utilities</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div data-reveal="up" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Media</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Image and audio handling — resize, compress, trim, extract.</span></div>
+        <div data-reveal="up" data-reveal-delay="70" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Converters</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Format to format, without an upload you regret.</span></div>
+        <div data-reveal="up" data-reveal-delay="140" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">PDF</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Merge, split, compress, and reorder pages.</span></div>
+        <div data-reveal="up" data-reveal-delay="210" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Documents</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Text and document work, cleanly in the browser.</span></div>
+        <div data-reveal="up" data-reveal-delay="280" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Utilities</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">The small everyday tools, kept sharp.</span></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,2.4vw,32px);border-top:1px solid var(--color-divider);padding-top:22px;">
+        <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Status</span>
+        <span style="font-size:15px;color:color-mix(in srgb, var(--color-text) 74%, transparent);">Live and in daily use. New tools added on a rolling basis.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="lien" data-screen-label="Lien" data-parallax-scope="1" style="border-top:1px solid var(--color-divider);background:var(--color-surface);padding:clamp(56px,8vh,110px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(32px,5vh,60px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(28px,4vw,80px);align-items:end;">
+        <div data-parallax="26" data-follow="14" style="position:relative;">
+          <div data-follow-target="1" class="blueprint" style="position:relative;aspect-ratio:16/10;background:var(--color-bg);transition:transform 200ms linear;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="position:absolute;inset:0;padding:clamp(16px,2vw,30px);display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 48%, transparent);">Verified / BC</span>
+                <span style="flex:1;height:1px;background:var(--color-divider);"></span>
+                <span style="width:7px;height:7px;background:var(--color-accent);"></span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,48px);">
+                <div style="width:clamp(72px,9vw,128px);aspect-ratio:3/4;border:1px solid var(--color-divider);display:flex;flex-direction:column;justify-content:flex-end;gap:5px;padding:8px;"><span style="width:100%;height:1px;background:var(--color-divider);"></span><span style="width:70%;height:2px;background:color-mix(in srgb, var(--color-text) 26%, transparent);"></span><span style="width:44%;height:2px;background:color-mix(in srgb, var(--color-text) 16%, transparent);"></span></div>
+                <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><span style="width:clamp(30px,4.5vw,76px);height:1px;background:var(--color-accent);"></span><span style="width:9px;height:9px;background:var(--color-accent);"></span><span style="width:clamp(30px,4.5vw,76px);height:1px;background:var(--color-accent);"></span></div>
+                <div style="width:clamp(72px,9vw,128px);aspect-ratio:3/4;border:1px solid var(--color-divider);display:flex;flex-direction:column;justify-content:flex-end;gap:5px;padding:8px;"><span style="width:100%;height:1px;background:var(--color-divider);"></span><span style="width:56%;height:2px;background:color-mix(in srgb, var(--color-text) 26%, transparent);"></span><span style="width:38%;height:2px;background:color-mix(in srgb, var(--color-text) 16%, transparent);"></span></div>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;">
+                <span style="flex:1;height:1px;background:var(--color-divider);"></span>
+                <span style="font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 38%, transparent);">Apply → Verify → Introduce</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:baseline;gap:clamp(14px,2vw,26px);">
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);">02</span>
+            <span class="tag tag-accent" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">Shipped / In production</span>
+          </div>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,5.4vw,88px);line-height:0.92;letter-spacing:-0.032em;">Lien</h2>
+          <p style="margin:0;max-width:46ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 72%, transparent);">A verified dating app for British Columbia. Members apply rather than sign up, identity is checked before anyone is let in, and introductions are curated instead of endlessly swiped. Smaller by design.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div data-reveal="up" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);">Step 01</span><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(18px,1.8vw,25px);">Apply</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 70%, transparent);">A short written application, read by a person.</span></div>
+        <div data-reveal="up" data-reveal-delay="80" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Step 02</span><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(18px,1.8vw,25px);">Verify</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Identity confirmed before a profile goes live.</span></div>
+        <div data-reveal="up" data-reveal-delay="160" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Step 03</span><span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(18px,1.8vw,25px);">Introduce</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Curated matches, paced deliberately slowly.</span></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,2.4vw,32px);border-top:1px solid var(--color-divider);padding-top:22px;">
+        <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Status</span>
+        <span style="font-size:15px;color:color-mix(in srgb, var(--color-text) 74%, transparent);">Live in British Columbia. Membership by application.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="clevermart" data-screen-label="Clevermart" data-parallax-scope="1" style="border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(32px,5vh,60px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(28px,4vw,80px);align-items:end;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:baseline;gap:clamp(14px,2vw,26px);">
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-text) 16%, transparent);">03</span>
+            <span class="tag tag-outline" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In progress</span>
+          </div>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,5.4vw,88px);line-height:0.92;letter-spacing:-0.032em;">Clevermart</h2>
+          <p style="margin:0;max-width:46ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 72%, transparent);">A dropshipping store on a modern commerce stack — Next.js, Stripe, and a catalogue built to grow without a rebuild. Storefront and checkout are under construction now.</p>
+        </div>
+        <div data-parallax="22" style="position:relative;">
+          <div class="blueprint" style="position:relative;aspect-ratio:16/10;background:var(--color-bg);">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-text) 5%, transparent) 0 1px, transparent 1px 9px);"></div>
+            <div style="position:absolute;inset:0;padding:clamp(16px,2vw,30px);display:flex;flex-direction:column;gap:clamp(12px,1.6vw,20px);">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 48%, transparent);">Store / in build</span>
+                <span style="flex:1;height:1px;background:var(--color-divider);"></span>
+              </div>
+              <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1vw,14px);">
+                <div style="border:1px solid var(--color-divider);background:var(--color-bg);display:flex;flex-direction:column;justify-content:flex-end;gap:5px;padding:8px;"><span style="width:64%;height:2px;background:color-mix(in srgb, var(--color-text) 26%, transparent);"></span><span style="width:34%;height:2px;background:var(--color-accent);"></span></div>
+                <div style="border:1px solid var(--color-divider);background:var(--color-bg);display:flex;flex-direction:column;justify-content:flex-end;gap:5px;padding:8px;"><span style="width:52%;height:2px;background:color-mix(in srgb, var(--color-text) 26%, transparent);"></span><span style="width:28%;height:2px;background:var(--color-accent);"></span></div>
+                <div style="border:1px dashed color-mix(in srgb, var(--color-text) 26%, transparent);display:grid;place-items:center;"><span style="font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 34%, transparent);">Next</span></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="height:2px;background:color-mix(in srgb, var(--color-text) 12%, transparent);"><div ref="{{ cmBar }}" style="width:0%;height:2px;background:var(--color-accent);transition:width 1600ms cubic-bezier(.19,1,.22,1);"></div></div>
+                <div style="display:flex;justify-content:space-between;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 38%, transparent);"><span>Catalogue</span><span>Checkout</span><span>Launch</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div data-reveal="up" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);">Done</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Catalogue structure and product data model.</span></div>
+        <div data-reveal="up" data-reveal-delay="70" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);">Done</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Design system and storefront layouts.</span></div>
+        <div data-reveal="up" data-reveal-delay="140" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">In build</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Checkout, payments, and order handling.</span></div>
+        <div data-reveal="up" data-reveal-delay="210" style="background:var(--color-bg);padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:9px;"><span style="font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 45%, transparent);">Next</span><span style="font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 72%, transparent);">Fulfilment wiring, then a quiet launch.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cleverjobs" data-screen-label="CleverJobs" style="border-top:1px solid var(--color-divider);background:var(--color-surface);padding:clamp(56px,8vh,110px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(28px,4vw,80px);align-items:center;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:baseline;gap:clamp(14px,2vw,26px);">
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-text) 12%, transparent);">04</span>
+          <span class="tag tag-neutral" style="letter-spacing:0.14em;text-transform:uppercase;font-size:10px;white-space:nowrap;">In development</span>
+        </div>
+        <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,5.4vw,88px);line-height:0.92;letter-spacing:-0.032em;color:color-mix(in srgb, var(--color-text) 80%, transparent);">CleverJobs</h2>
+        <p style="margin:0;max-width:44ch;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:color-mix(in srgb, var(--color-text) 64%, transparent);">In development. We would rather say nothing than say something vague — details when there is something worth showing.</p>
+        <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;margin-top:6px;text-decoration:none;color:var(--color-accent-700);font-family:var(--font-heading);font-weight:600;font-size:14px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid var(--color-accent);padding-bottom:6px;">Ask us about it<span style="width:18px;height:1px;background:currentColor;"></span></a>
+      </div>
+      <div data-reveal="scale" style="position:relative;">
+        <div class="blueprint" style="position:relative;aspect-ratio:16/10;background:transparent;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="position:absolute;inset:0;display:grid;place-items:center;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+              <span style="width:14px;height:14px;border:1px solid color-mix(in srgb, var(--color-text) 30%, transparent);"></span>
+              <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 36%, transparent);">Nothing to show yet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Why we build" style="border-top:1px solid var(--color-divider);padding:clamp(70px,10vh,130px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:clamp(32px,5vw,100px);align-items:start;">
+      <h2 data-reveal="up" style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,4.6vw,76px);line-height:0.94;letter-spacing:-0.03em;max-width:18ch;">Our own products keep us honest.</h2>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <p data-reveal="up" style="margin:0;font-size:clamp(16px,1.15vw,19px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 74%, transparent);">Running our own software means we live with every decision we would otherwise hand to a client: the migration that was rushed, the abstraction that was clever instead of clear, the launch that shipped without monitoring.</p>
+        <p data-reveal="up" data-reveal-delay="90" style="margin:0;font-size:clamp(16px,1.15vw,19px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 74%, transparent);">It is the cheapest possible education, and clients get the benefit of it without paying the tuition.</p>
+        <a href="Services.dc.html" data-magnet="10" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;margin-top:6px;text-decoration:none;color:var(--color-bg);background:var(--color-accent);border:1px solid var(--color-accent);padding:14px 24px;font-family:var(--font-heading);font-weight:600;font-size:14px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;transition:background 280ms;" style-hover="background:var(--color-accent-700);">See what we offer<span style="width:16px;height:1px;background:currentColor;"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Products CTA" style="background:var(--color-accent-900);color:var(--color-bg);padding:clamp(80px,12vh,160px) 0;">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(26px,4vh,48px);">
+      <span style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-bg) 58%, transparent);">Start a project</span>
+      <h2 data-reveal="up" style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,7vw,124px);line-height:0.9;letter-spacing:-0.035em;max-width:18ch;">Want one of these built for you?</h2>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,3vw,48px);">
+        <a href="Contact.dc.html" data-magnet="14" style="display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:var(--color-accent-900);background:var(--color-bg);border:1px solid var(--color-bg);padding:16px 28px;font-family:var(--font-heading);font-weight:600;font-size:15px;letter-spacing:0.09em;text-transform:uppercase;white-space:nowrap;transition:background 280ms, color 280ms;" style-hover="background:var(--color-accent-300);border-color:var(--color-accent-300);">Start a project<span style="width:18px;height:1px;background:currentColor;"></span></a>
+        <a href="mailto:hello@obecco.com" style="text-decoration:none;color:color-mix(in srgb, var(--color-bg) 78%, transparent);font-size:15px;letter-spacing:0.08em;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 40%, transparent);padding-bottom:4px;">hello@obecco.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background:var(--color-bg);padding:clamp(50px,7vh,80px) 0 clamp(30px,4vh,44px);">
+    <div style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(30px,5vh,56px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(28px,4vw,64px);">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:0.26em;text-transform:uppercase;">Obecco</span>
+          <span style="font-size:13.5px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 58%, transparent);max-width:26ch;">We build software that moves. Independent software company, founded 2026.</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Site</span>
+          <a href="Home.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Home</a>
+          <a href="Services.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Services</a>
+          <a href="About.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">About</a>
+          <a href="Contact.dc.html" style="text-decoration:none;color:var(--color-text);font-size:14px;">Contact</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Products</span>
+          <a href="#toolferry" style="text-decoration:none;color:var(--color-text);font-size:14px;">ToolFerry</a>
+          <a href="#lien" style="text-decoration:none;color:var(--color-text);font-size:14px;">Lien</a>
+          <a href="#clevermart" style="text-decoration:none;color:var(--color-text);font-size:14px;">Clevermart</a>
+          <a href="#cleverjobs" style="text-decoration:none;color:var(--color-text);font-size:14px;">CleverJobs</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">Contact</span>
+          <a href="mailto:hello@obecco.com" style="text-decoration:none;color:var(--color-text);font-size:14px;">hello@obecco.com</a>
+          <a href="Contact.dc.html" style="text-decoration:none;color:var(--color-accent-700);font-size:14px;">Start a project</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;border-top:1px solid var(--color-divider);padding-top:20px;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 42%, transparent);">
+        <span>© 2026 Obecco</span>
+        <span>Designed and built in-house</span>
+      </div>
+    </div>
+  </footer>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.root = React.createRef();
+    this.cmBar = React.createRef();
+  }
+
+  componentDidMount() {
+    const start = () => {
+      if (!window.ObeccoMotion) { this._t = setTimeout(start, 40); return; }
+      this.m = window.ObeccoMotion.boot(this.root.current || document);
+      this.m.once(this.cmBar.current, () => { this.cmBar.current.style.width = '62%'; });
+      this.m.sync();
+    };
+    start();
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); if (this.m) this.m.destroy(); }
+
+  renderVals() { return { root: this.root, cmBar: this.cmBar }; }
+}
+</script>
+</body>
+</html>

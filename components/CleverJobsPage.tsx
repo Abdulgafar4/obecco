@@ -1,0 +1,57 @@
+import { s } from '@/lib/style';
+import Link from 'next/link';
+
+export function CleverJobsPage() {
+  return (
+    <>
+      <section style={s("max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,84px) 24px clamp(24px,3vw,40px)")}>
+            <div style={s("display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start")}>
+              <div data-reveal="" style={s("flex:0 0 116px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#8A8E86;text-transform:uppercase;padding-top:12px")}>
+                <div style={s("color:#16161A")}>04</div>
+                <div>Product</div>
+              </div>
+              <div style={s("flex:1 1 480px;min-width:0")}>
+                <div data-reveal="" style={s("display:flex;align-items:center;gap:14px;flex-wrap:wrap")}>
+                  <svg role="img" aria-label="CleverJobs mark" viewBox="0 0 24 24" width={38} height="38" fill="none" stroke="#4E524C" strokeWidth={1.6}><rect x="3" y="3" width="18" height="18" rx="1.5" /><circle cx="12" cy="12" r="3" /></svg>
+                  <h1 style={s("margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,62px);line-height:1;letter-spacing:-0.035em")}>CleverJobs</h1>
+                  <span style={s("display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#4E524C;border:1px dashed #B9BDB2;border-radius:6px;padding:6px 10px;background:#F1F2EE")}><span aria-hidden={true} style={s("width:7px;height:7px;border-radius:50%;border:1.5px solid #9A9E94")}></span>In development</span>
+                </div>
+                <p data-reveal="" style={s("margin:24px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.025em;color:#16161A")}>Details to follow.</p>
+              </div>
+              <aside data-reveal="" style={s("flex:0 1 250px;min-width:220px;max-width:300px;border:1px solid #D4D6CD;border-radius:10px;background:#F5F5F1;padding:20px")}>
+                <div style={s("font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#9A9E94;padding-bottom:12px;border-bottom:1px solid #DCDED5")}>Key facts</div>
+                <dl style={s("margin:0;display:flex;flex-direction:column;gap:13px;padding-top:14px;font-family:'IBM Plex Mono',monospace;font-size:12px")}>
+                  <div><dt style={s("color:#9A9E94;text-transform:uppercase;font-size:10px;letter-spacing:0.07em")}>Index</dt><dd style={s("margin:4px 0 0;color:#3C403A")}>04</dd></div>
+                  <div><dt style={s("color:#9A9E94;text-transform:uppercase;font-size:10px;letter-spacing:0.07em")}>Status</dt><dd style={s("margin:4px 0 0;color:#4E524C")}>In development</dd></div>
+                  <div><dt style={s("color:#9A9E94;text-transform:uppercase;font-size:10px;letter-spacing:0.07em")}>Details</dt><dd style={s("margin:4px 0 0;color:#3C403A")}>To follow</dd></div>
+                </dl>
+              </aside>
+            </div>
+          </section>
+
+          <section style={s("background:#16161A;color:#E9EAE5")}>
+            <div style={s("max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,76px) 24px")}>
+              <div style={s("display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start")}>
+                <div data-reveal="" style={s("flex:0 0 116px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;color:#7C8078;text-transform:uppercase;padding-top:6px")}>Context</div>
+                <div style={s("flex:1 1 460px;min-width:0")}>
+                  <h2 data-reveal="" style={s("margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,34px);letter-spacing:-0.03em;line-height:1.14;max-width:26ch")}>Part of what we&apos;re building at Obecco.</h2>
+                  <p data-reveal="" style={s("margin:18px 0 0;max-width:56ch;color:#C8CAC3")}>CleverJobs is currently in development. We will share more when there is more to share. Until then it sits at number 04 in our product index, alongside two live products and one more in development.</p>
+                  <div data-reveal="" style={s("display:flex;gap:12px;flex-wrap:wrap;margin-top:26px")}>
+                    <Link href="/products" className="dc-hover-1de5f7" style={s("background:#E9EAE5;color:#16161A;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.07em;text-transform:uppercase;border:none;border-radius:6px;padding:14px 22px;cursor:pointer;transition:transform .18s ease")}>See live products</Link>
+                    <Link href="/contact" className="dc-hover-3c13a2" style={s("background:none;color:#8FBFA9;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.07em;text-transform:uppercase;border:1px solid #3C5A4E;border-radius:6px;padding:14px 22px;cursor:pointer;transition:border-color .18s ease")}>Get in touch</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <nav aria-label="Product index" style={s("max-width:1240px;margin:0 auto;padding:clamp(28px,3.5vw,52px) 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center")}>
+            <span style={s("font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#9A9E94;margin-right:6px")}>Product index</span>
+            <Link href="/toolferry" className="dc-hover-f5a9f7" data-pindex="toolferry" style={s("background:none;border:1px solid #C6C9BF;border-radius:6px;padding:9px 13px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#3C403A")}>01 ToolFerry</Link>
+            <Link href="/lien" className="dc-hover-f5a9f7" data-pindex="lien" style={s("background:none;border:1px solid #C6C9BF;border-radius:6px;padding:9px 13px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#3C403A")}>02 Lien</Link>
+            <Link href="/clevermart" className="dc-hover-f5a9f7" data-pindex="clevermart" style={s("background:none;border:1px solid #C6C9BF;border-radius:6px;padding:9px 13px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#3C403A")}>03 Clevermart</Link>
+            <Link href="/cleverjobs" className="dc-hover-f5a9f7" data-pindex="cleverjobs" style={s("background:none;border:1px solid #C6C9BF;border-radius:6px;padding:9px 13px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#3C403A")}>04 CleverJobs</Link>
+          </nav>
+    </>
+  );
+}
