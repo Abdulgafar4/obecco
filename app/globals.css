@@ -92,7 +92,13 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: 1;
-    background: color-mix(in srgb, var(--color-bg) 55%, transparent);
+    /* Light wash only — keep the field readable as the hero background */
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-bg) 28%, transparent) 0%,
+      color-mix(in srgb, var(--color-bg) 12%, transparent) 40%,
+      color-mix(in srgb, var(--color-bg) 35%, transparent) 100%
+    );
   }
 
   [data-ref="hero"] [data-ref="heroInner"] {
