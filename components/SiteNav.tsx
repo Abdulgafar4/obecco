@@ -35,10 +35,15 @@ export function SiteNav() {
       const bar = barRef.current;
       const inner = innerRef.current;
       if (!bar || !inner) return;
+      const mobile = window.matchMedia("(max-width: 900px)").matches;
+      /* Mobile: solid bar so content never reads through while scrolling */
       bar.style.background = scrolled
-        ? "color-mix(in srgb, var(--color-bg) 88%, transparent)"
+        ? mobile
+          ? "var(--color-bg)"
+          : "color-mix(in srgb, var(--color-bg) 88%, transparent)"
         : "transparent";
-      bar.style.backdropFilter = scrolled ? "saturate(140%) blur(14px)" : "none";
+      bar.style.backdropFilter =
+        scrolled && !mobile ? "saturate(140%) blur(14px)" : "none";
       bar.style.borderBottomColor = scrolled
         ? "var(--color-divider)"
         : "transparent";

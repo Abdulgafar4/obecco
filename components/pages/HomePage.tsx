@@ -12,7 +12,7 @@ export function HomePage() {
   return (
     <>
       <section data-ref="hero" data-screen-label="Hero" data-parallax-scope="1" style={s("position:relative;min-height:100svh;overflow:hidden;")}>
-          <div data-ref="canvasWrap" style={s("position:absolute;inset:0;z-index:0;will-change:transform;-webkit-mask-image:linear-gradient(102deg, transparent 4%, rgba(0,0,0,0.18) 26%, rgba(0,0,0,0.72) 52%, #000 74%);mask-image:linear-gradient(102deg, transparent 4%, rgba(0,0,0,0.18) 26%, rgba(0,0,0,0.72) 52%, #000 74%);")}>
+          <div data-ref="canvasWrap" className="hero-canvas">
             <canvas data-ref="canvas" style={s("display:block;width:100%;height:100%;")}></canvas>
           </div>
           <div data-ref="heroInner" style={s("position:relative;z-index:1;min-height:100svh;max-width:1640px;margin:0 auto;padding:clamp(104px,13vh,150px) clamp(20px,3.6vw,56px) clamp(28px,4vh,44px);display:grid;grid-template-rows:auto 1fr auto;gap:clamp(24px,4vh,52px);")}>
@@ -65,7 +65,7 @@ export function HomePage() {
 
         <section data-screen-label="Services" style={s("padding:clamp(80px,11vh,150px) 0 clamp(90px,13vh,170px);border-top:1px solid var(--color-divider);")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:clamp(44px,6vw,110px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,140px);display:flex;flex-direction:column;gap:clamp(20px,3vh,34px);")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,140px);display:flex;flex-direction:column;gap:clamp(20px,3vh,34px);padding-bottom:clamp(16px,2vh,24px);")}>
               <div style={s("display:flex;align-items:center;gap:14px;")}>
                 <span style={s("font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);")}>02</span>
                 <span style={s("width:clamp(24px,3vw,54px);height:1px;background:var(--color-divider);")}></span>

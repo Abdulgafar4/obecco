@@ -90,7 +90,7 @@ export function AboutPage() {
 
         <section data-screen-label="Working with us" style={s("border-top:1px solid var(--color-divider);padding:clamp(70px,10vh,130px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);align-items:start;")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <div style={s("display:flex;align-items:center;gap:14px;")}>
                 <span style={s("font-size:11px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;color:var(--color-accent-700);")}>In practice</span>
                 <span style={s("width:clamp(24px,3vw,54px);height:1px;background:var(--color-divider);")}></span>

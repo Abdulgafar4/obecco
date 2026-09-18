@@ -21,10 +21,12 @@ export function HomeMotion() {
       const reduced = OM.reduced();
       m = OM.boot(root ?? document);
 
+      const mobile = window.matchMedia("(max-width: 900px)").matches;
+      /* Mobile: enlarge + center so the field reads as the hero background */
       field = OM.heroField(q<HTMLCanvasElement>("[data-ref='canvas']"), {
-        scale: 0.78,
-        cx: 0.68,
-        cy: 0.42,
+        scale: mobile ? 2.4 : 0.78,
+        cx: mobile ? 0.5 : 0.68,
+        cy: mobile ? 0.48 : 0.42,
       });
 
       const hero = q<HTMLElement>("[data-ref='hero']");

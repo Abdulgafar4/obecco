@@ -41,7 +41,7 @@ export function ServicesPage() {
 
         <section id="website" data-screen-label="Service 01" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>01</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>Website Design &amp; Development</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>Marketing sites and editorial experiences that load fast, read well, and stay editable by the people who own them.</p>
@@ -67,7 +67,7 @@ export function ServicesPage() {
 
         <section id="apps" data-screen-label="Service 02" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>02</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>Custom Web Applications</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>Dashboards, portals, and internal tools built around the workflow your team actually follows — not the one a template assumes.</p>
@@ -93,7 +93,7 @@ export function ServicesPage() {
 
         <section id="product" data-screen-label="Service 03" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>03</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>Product Engineering</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>A full product build — architecture, auth, data, payments, deployment — taken to a first release and then kept moving. The same work we do on our own products.</p>
@@ -119,7 +119,7 @@ export function ServicesPage() {
 
         <section id="design" data-screen-label="Service 04" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>04</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>UI/UX &amp; Design Systems</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>Research, flows, and interface design, ending in a component system that every future screen can inherit.</p>
@@ -145,7 +145,7 @@ export function ServicesPage() {
 
         <section id="commerce" data-screen-label="Service 05" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>05</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>E-commerce</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>Storefronts, catalogue, and checkout on a modern commerce stack — the same stack we are building Clevermart on.</p>
@@ -171,7 +171,7 @@ export function ServicesPage() {
 
         <section id="integrations" data-screen-label="Service 06" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>06</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>Integrations &amp; Automation</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>The quiet plumbing between the tools you already pay for, so information stops being copied by hand.</p>
@@ -197,7 +197,7 @@ export function ServicesPage() {
 
         <section id="maintenance" data-screen-label="Service 07" style={s("border-top:1px solid var(--color-divider);padding:clamp(56px,8vh,110px) 0;")}>
           <div style={s("max-width:1640px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,100px);")}>
-            <div style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;")}>
+            <div className="sticky-aside" style={s("align-self:start;position:sticky;top:clamp(96px,12vh,132px);display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(12px,2vh,20px);")}>
               <span style={s("font-family:var(--font-heading);font-weight:600;font-size:clamp(44px,6vw,104px);line-height:0.8;letter-spacing:-0.04em;color:color-mix(in srgb, var(--color-accent) 32%, transparent);")}>07</span>
               <h2 style={s("margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,3.6vw,58px);line-height:0.96;letter-spacing:-0.028em;")}>Maintenance &amp; Iteration</h2>
               <p style={s("margin:0;max-width:40ch;font-size:clamp(15px,1.05vw,17.5px);line-height:1.62;color:color-mix(in srgb, var(--color-text) 70%, transparent);")}>Launch is the middle of the work, not the end. We stay on to release, watch, and improve.</p>
