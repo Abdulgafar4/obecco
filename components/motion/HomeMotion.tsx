@@ -22,13 +22,12 @@ export function HomeMotion() {
       m = OM.boot(root ?? document);
 
       const mobile = window.matchMedia("(max-width: 900px)").matches;
-      /* Mobile: full-bleed background — keep scale so the structure sits
-         behind the copy (too large = empty center under the headline). */
+      /* Mobile: cover-scale so the field reads as a full-bleed section bg. */
       field = OM.heroField(q<HTMLCanvasElement>("[data-ref='canvas']"), {
-        scale: mobile ? 1.55 : 0.78,
-        cx: mobile ? 0.55 : 0.68,
-        cy: mobile ? 0.45 : 0.42,
-        alpha: mobile ? 2.4 : 1,
+        scale: mobile ? 2.35 : 0.78,
+        cx: mobile ? 0.5 : 0.68,
+        cy: mobile ? 0.5 : 0.42,
+        alpha: mobile ? 2.8 : 1,
       });
 
       const hero = q<HTMLElement>("[data-ref='hero']");
@@ -38,7 +37,8 @@ export function HomeMotion() {
       if (hero) {
         m.progress(hero, (p) => {
           field?.setDepth(p * 210);
-          if (canvasWrap && !reduced) {
+          /* Keep mobile bg locked; desktop keeps the parallax drift. */
+          if (canvasWrap && !reduced && !mobile) {
             canvasWrap.style.transform = `translate3d(0,${(p * 70).toFixed(1)}px,0) scale(${(1 + p * 0.07).toFixed(3)})`;
           }
           if (heroInner && !reduced) {
