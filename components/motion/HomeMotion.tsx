@@ -22,11 +22,13 @@ export function HomeMotion() {
       m = OM.boot(root ?? document);
 
       const mobile = window.matchMedia("(max-width: 900px)").matches;
-      /* Mobile: enlarge + center so the field fills the hero as a background */
+      /* Mobile: full-bleed background — keep scale so the structure sits
+         behind the copy (too large = empty center under the headline). */
       field = OM.heroField(q<HTMLCanvasElement>("[data-ref='canvas']"), {
-        scale: mobile ? 2.85 : 0.78,
-        cx: mobile ? 0.52 : 0.68,
-        cy: mobile ? 0.5 : 0.42,
+        scale: mobile ? 1.55 : 0.78,
+        cx: mobile ? 0.55 : 0.68,
+        cy: mobile ? 0.45 : 0.42,
+        alpha: mobile ? 2.4 : 1,
       });
 
       const hero = q<HTMLElement>("[data-ref='hero']");
