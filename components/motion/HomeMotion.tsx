@@ -22,12 +22,13 @@ export function HomeMotion() {
       m = OM.boot(root ?? document);
 
       const mobile = window.matchMedia("(max-width: 900px)").matches;
-      /* Mobile: cover-scale so the field reads as a full-bleed section bg. */
+      /* Mobile: cover mode + static CSS fallback → true full-bleed hero bg. */
       field = OM.heroField(q<HTMLCanvasElement>("[data-ref='canvas']"), {
-        scale: mobile ? 2.35 : 0.78,
+        scale: mobile ? 1.15 : 0.78,
         cx: mobile ? 0.5 : 0.68,
-        cy: mobile ? 0.5 : 0.42,
-        alpha: mobile ? 2.8 : 1,
+        cy: mobile ? 0.48 : 0.42,
+        alpha: mobile ? 3.1 : 1,
+        cover: mobile,
       });
 
       const hero = q<HTMLElement>("[data-ref='hero']");

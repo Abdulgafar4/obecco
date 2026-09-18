@@ -79,11 +79,22 @@ body {
     top: auto !important;
   }
 
-  /* Full-bleed hero field as section background */
+  /*
+    Mobile hero: treat the field as a real section background.
+    Static PNG paints immediately (no JS flash); live canvas draws on top.
+  */
+  [data-ref="hero"] {
+    background-color: var(--color-bg);
+    background-image: url("/hero-field-mobile.png");
+    background-size: cover;
+    background-position: center 42%;
+    background-repeat: no-repeat;
+  }
+
   .hero-canvas {
     -webkit-mask-image: none !important;
     mask-image: none !important;
-    opacity: 1;
+    opacity: 0.92;
   }
 
   .hero-canvas::after {
